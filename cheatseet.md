@@ -11,7 +11,8 @@
 - コンテナ内で、stdoutに出力された結果のみを出力する
 
 # alp
-
+### `alp json --file tmp --sort=avg -r`
+- レスポンスタイム平均降順ソート
 
 # tips
 - `docker compose down`してから`up`するとDBの内容が消える
