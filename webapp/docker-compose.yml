@@ -1,6 +1,7 @@
 services:
   nginx:
-    image: nginx:1.22
+    build:
+      dockerfile: Dockerfile-nginx
     volumes:
       - ./etc/nginx/conf.d:/etc/nginx/conf.d
       - ./public:/public

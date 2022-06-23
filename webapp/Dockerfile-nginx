@@ -1,0 +1,14 @@
+FROM nginx:1.22
+
+RUN unlink /var/log/nginx/access.log \
+    && unlink /var/log/nginx/error.log \
+    && apt update \
+    && apt install wget vim zip -y \
+    && wget https://github.com/tkuchiki/alp/releases/download/v1.0.9/alp_linux_amd64.zip \
+    && unzip alp_linux_amd64.zip \
+    && install ./alp /usr/local/bin \
+    && rm alp_linux_amd64.zip
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+CMD ["nginx", "-g", "daemon off;"]
