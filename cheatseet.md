@@ -6,6 +6,10 @@
 - EC2でのnginx再起動コマンド
 - Dockerコンテナ上でNginxを再起動するとコンテナが止まる
 
+# Docker
+### `docker logs webapp_nginx_1 2>/dev/null`
+- コンテナ内で、stdoutに出力された結果のみを出力する
+
 # alp
 
 
