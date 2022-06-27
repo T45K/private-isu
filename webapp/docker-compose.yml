@@ -33,7 +33,8 @@ services:
           memory: 1g
 
   mysql:
-    image: mysql/mysql-server:8.0
+    build:
+      dockerfile: Dockerfile-mysql
     environment:
       - "TZ=Asia/Tokyo"
       - "MYSQL_ROOT_HOST=%"

@@ -1,0 +1,5 @@
+FROM mysql/mysql-server:8.0
+
+RUN mkdir -p /var/log/mysql \
+    && touch /var/log/mysql/mysql-slow.log \
+    && chown mysql:mysql /var/log/mysql/mysql-slow.log
