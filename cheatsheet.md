@@ -10,6 +10,9 @@
 ### `docker logs webapp_nginx_1 2>/dev/null`
 - コンテナ内で、stdoutに出力された結果のみを出力する
 
+### `docker compose down --rmi all --volumes --remove-orphans`
+- 滅びの呪文
+
 # alp
 ### `alp json --file tmp --sort=avg -r`
 - レスポンスタイム平均降順ソート
